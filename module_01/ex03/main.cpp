@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 15:56:02 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/01/15 17:22:08 by mobadiah         ###   ########.fr       */
+/*   Created: 2024/01/16 06:12:04 by mobadiah          #+#    #+#             */
+/*   Updated: 2024/01/16 15:38:06 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
 
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 #include <iostream>
-#include <string>
 
-class Zombie {
-private:
-    std::string name;
+int main()
+{
+	{
+	Weapon club = Weapon("crude spiked club");
+	HumanA bob("Bob", club);
+	bob.attack();
+	club.setType("some other type of club");
+	bob.attack();
+	}
+	{
+	Weapon club = Weapon("crude spiked club");
+	HumanB jim("Jim");
+	jim.setWeapon(club);
+	jim.attack();
+	club.setType("some other type of club");
+	jim.attack();
+	}
+return 0;
+}
 
-public:
-    Zombie();
-    Zombie(std::string name);
-    ~Zombie();
-    void announce() const;
-};
-
-Zombie* zombieHorde(int N, std::string name);
-
-#endif // ZOMBIE_HPP
