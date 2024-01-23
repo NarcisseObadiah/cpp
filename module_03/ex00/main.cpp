@@ -5,24 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: narcisse <narcisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 02:15:22 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/01/22 21:26:06 by narcisse         ###   ########.fr       */
+/*   Created: 2024/01/23 05:19:06 by narcisse          #+#    #+#             */
+/*   Updated: 2024/01/23 05:19:17 by narcisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// main.cpp
-#include "Fixed.hpp"
+#include "ClapTrap.hpp"
 
 int main() {
-    Fixed a;
-    Fixed b(a);
-    Fixed c;
-    c = b;
+    // Create ClapTrap instances
+    ClapTrap claptrap1("CL4P-TP1");
+    ClapTrap claptrap2("CL4P-TP2");
 
-    std::cout << a.getRawBits() << std::endl;
-    std::cout << b.getRawBits() << std::endl;
-    std::cout << c.getRawBits() << std::endl;
+    // Test attack, takeDamage, and beRepaired functions
+    claptrap1.attack("Enemy1");
+    claptrap2.takeDamage(5);
+    claptrap1.beRepaired(3);
+
+    claptrap2.attack("Enemy2");
+    claptrap1.takeDamage(8);
+    claptrap2.beRepaired(2);
 
     return 0;
 }
-

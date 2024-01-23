@@ -1,7 +1,7 @@
 NAME = prog
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra -std=c++98
 CC = c++
-SRCS = main.cpp  
+SRCS = main.cpp Fixed.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 $(NAME): $(OBJS)
@@ -11,7 +11,6 @@ all: $(NAME)
 
 clean:
 	@rm -f $(OBJS)
-
 fclean: clean
 	@rm -f $(NAME)
 

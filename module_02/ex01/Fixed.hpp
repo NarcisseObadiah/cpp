@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: narcisse <narcisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 02:15:22 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/01/22 21:26:06 by narcisse         ###   ########.fr       */
+/*   Created: 2024/01/20 02:15:12 by mobadiah          #+#    #+#             */
+/*   Updated: 2024/01/22 21:01:51 by narcisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// main.cpp
-#include "Fixed.hpp"
+//Fixed.hpp
 
-int main() {
-    Fixed a;
-    Fixed b(a);
-    Fixed c;
-    c = b;
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
-    std::cout << a.getRawBits() << std::endl;
-    std::cout << b.getRawBits() << std::endl;
-    std::cout << c.getRawBits() << std::endl;
+#include <iostream>
 
-    return 0;
-}
+class Fixed {
+private:
+    int value;
+    static const int fractionalBits = 8;
+
+public:
+    Fixed();
+    Fixed(const int intValue);
+    Fixed(const float floatValue);  
+    float toFloat() const;
+    int toInt() const;
+    
+    friend std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
+};
+
+#endif
 
