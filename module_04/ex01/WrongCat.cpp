@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   wrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 02:15:22 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/01/23 16:54:11 by mobadiah         ###   ########.fr       */
+/*   Created: 2024/01/24 09:06:31 by mobadiah          #+#    #+#             */
+/*   Updated: 2024/01/24 09:41:32 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// main.cpp
-#include "Fixed.hpp"
+// WrongCat.cpp
+#include "include/WrongCat.hpp"
 
-int main() {
-    Fixed a;
-    Fixed b(a);
-    Fixed c;
-    c = b;
+WrongCat::WrongCat() {
+    this->type = "WrongCat";
+    std::cout << "WrongCat constructor called for " << this->type << std::endl;
+}
 
-    std::cout << a.getRawBits() << std::endl;
-    std::cout << b.getRawBits() << std::endl;
-    std::cout << c.getRawBits() << std::endl;
+WrongCat::~WrongCat() {
+    std::cout << "WrongCat destructor called for " << this->type << std::endl;
+}
 
-    return 0;
+void WrongCat::makeSound() const {
+    std::cout << "Wrong Meow! Wrong Meow!" << std::endl;
 }
 

@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 05:38:21 by narcisse          #+#    #+#             */
-/*   Updated: 2024/01/23 18:35:33 by mobadiah         ###   ########.fr       */
+/*   Created: 2024/01/24 03:10:37 by mobadiah          #+#    #+#             */
+/*   Updated: 2024/01/24 03:15:31 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ScavTrap.cpp
+// FragTrap.cpp
+#include "FragTrap.hpp"
 
-#include "ScavTrap.hpp"
-
-ScavTrap::ScavTrap(const std::string& newName)
+FragTrap::FragTrap(const std::string& newName)
     : ClapTrap(newName) {
     hitPoints = 100;
-    energyPoints = 50;
-    attackDamage = 20;
-    std::cout << "ScavTrap constructor called for " << name << std::endl;
+    energyPoints = 100;
+    attackDamage = 30;
+    std::cout << "FragTrap constructor called for " << name << std::endl;
 }
 
-ScavTrap::~ScavTrap() {
-    std::cout << "ScavTrap destructor called for " << name << std::endl;
+FragTrap::~FragTrap() {
+    std::cout << "FragTrap destructor called for " << name << std::endl;
 }
 
-void ScavTrap::guardGate() {
-    std::cout << "ScavTrap " << name << " is now in Gatekeeper mode." << std::endl;
+void FragTrap::highFivesGuys() {
+    std::cout << "FragTrap " << name << " requests a positive high five!" << std::endl;
 }
+ 

@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 02:15:22 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/01/23 16:54:11 by mobadiah         ###   ########.fr       */
+/*   Created: 2024/01/24 08:45:48 by mobadiah          #+#    #+#             */
+/*   Updated: 2024/01/24 09:20:52 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// main.cpp
-#include "Fixed.hpp"
 
-int main() {
-    Fixed a;
-    Fixed b(a);
-    Fixed c;
-    c = b;
+// Dog.hpp
+#ifndef DOG_HPP
+#define DOG_HPP
 
-    std::cout << a.getRawBits() << std::endl;
-    std::cout << b.getRawBits() << std::endl;
-    std::cout << c.getRawBits() << std::endl;
+#include "Animal.hpp"
 
-    return 0;
-}
+class Dog : public Animal {
+public:
+    Dog();
+    ~Dog();
 
+    void makeSound() const;
+};
+
+#endif // DOG_HPP

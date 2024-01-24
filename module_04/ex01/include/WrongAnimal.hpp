@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   wrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 02:15:22 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/01/23 16:54:11 by mobadiah         ###   ########.fr       */
+/*   Created: 2024/01/24 09:04:34 by mobadiah          #+#    #+#             */
+/*   Updated: 2024/01/24 09:21:48 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// main.cpp
-#include "Fixed.hpp"
+// WrongAnimal.hpp
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
-int main() {
-    Fixed a;
-    Fixed b(a);
-    Fixed c;
-    c = b;
+#include <iostream>
+#include <string>
 
-    std::cout << a.getRawBits() << std::endl;
-    std::cout << b.getRawBits() << std::endl;
-    std::cout << c.getRawBits() << std::endl;
+class WrongAnimal {
+protected:
+    std::string type;
 
-    return 0;
-}
+public:
+    WrongAnimal();
+    ~WrongAnimal();
 
+    void makeSound() const;
+    const std::string& getType() const;
+};
+
+#endif // WRONGANIMAL_HPP

@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 02:15:22 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/01/23 16:54:11 by mobadiah         ###   ########.fr       */
+/*   Created: 2024/01/24 08:46:13 by mobadiah          #+#    #+#             */
+/*   Updated: 2024/01/24 09:39:12 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// main.cpp
-#include "Fixed.hpp"
+// Dog.cpp
+#include "include/Dog.hpp"
 
-int main() {
-    Fixed a;
-    Fixed b(a);
-    Fixed c;
-    c = b;
-
-    std::cout << a.getRawBits() << std::endl;
-    std::cout << b.getRawBits() << std::endl;
-    std::cout << c.getRawBits() << std::endl;
-
-    return 0;
+Dog::Dog() {
+    this->type = "Dog";
+    std::cout << "Dog constructor called for " << this->type << std::endl;
 }
 
+Dog::~Dog() {
+    std::cout << "Dog destructor called for " << this->type << std::endl;
+}
+
+void Dog::makeSound() const {
+    std::cout << "Bark! Bark!" << std::endl;
+}
