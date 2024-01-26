@@ -1,5 +1,5 @@
 NAME = prog
-FLAGS = -Wall -Werror -Wextra -std=c++98 -O3 -Wshadow -Wno-shadow -fsanitize=address
+FLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address
 CC = c++
 SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJS = $(SRCS:.cpp=.o)

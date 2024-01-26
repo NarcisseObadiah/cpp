@@ -6,18 +6,18 @@
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:23:53 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/01/19 18:45:28 by mobadiah         ###   ########.fr       */
+/*   Updated: 2024/01/25 20:54:16 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
 Harl::Harl(void) {
-    // Constructor implementation (if needed)
+
 }
 
 Harl::~Harl(void) {
-    // Destructor implementation (if needed)
+
 }
 
 void Harl::debug(void) {

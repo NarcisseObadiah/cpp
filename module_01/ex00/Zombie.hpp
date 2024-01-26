@@ -6,7 +6,7 @@
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:37:31 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/01/09 13:38:07 by mobadiah         ###   ########.fr       */
+/*   Updated: 2024/01/25 20:28:10 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
 public:
     Zombie(std::string name);
     ~Zombie();
-    void announce() const;
+    void announce(void) const;
 };
 
 #endif // ZOMBIE_HPP

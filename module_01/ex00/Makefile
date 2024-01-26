@@ -1,5 +1,5 @@
 NAME = zombie
-FLAGS = -Wall -Werror -Wextra -std=c++98
+FLAGS = -Wall -Werror -Wextra -std=c++98  -fsanitize=address
 CC = c++
 SRCS = Zombie.cpp main.cpp newZombie.cpp randomChump.cpp
 OBJS = $(SRCS:.cpp=.o)

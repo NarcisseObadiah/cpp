@@ -1,5 +1,5 @@
 NAME = prog
-FLAGS = -Wall -Werror -Wextra -std=c++98
+FLAGS = -Wall -Werror -Wextra -std=c++98  -fsanitize=address
 CC = c++
 SRCS = main.cpp Fixed.cpp 
 OBJS = $(SRCS:.cpp=.o)
