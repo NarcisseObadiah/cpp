@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 05:19:06 by narcisse          #+#    #+#             */
-/*   Updated: 2024/01/29 16:01:34 by mobadiah         ###   ########.fr       */
+/*   Created: 2024/05/11 10:27:29 by mobadiah          #+#    #+#             */
+/*   Updated: 2024/05/11 11:16:22 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef SHRUBBERYCREATIONFORM_HPP
+#define SHRUBBERYCREATIONFORM_HPP
 
-int main() {
-    // Create ClapTrap instances
-    ClapTrap claptrap1("CL4P-TP1");
-    ClapTrap claptrap2("CL4P-TP2");
+#include "AForm.hpp"
 
-    // Test attack, takeDamage, and beRepaired functions
-    claptrap1.attack("Enemy1");
-    claptrap2.takeDamage(5);
-    claptrap1.beRepaired(3);
+class ShrubberyCreationForm : public AForm {
+public:
+    ShrubberyCreationForm(const std::string& target);
+    ~ShrubberyCreationForm();
 
-    claptrap2.attack("Enemy2");
-    claptrap1.takeDamage(8);
-    claptrap2.beRepaired(2);
+    void execute(const Bureaucrat& executor) const;
 
-    return 0;
-}
+private:
+    const std::string _target;
+};
+
+#endif

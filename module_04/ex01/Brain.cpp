@@ -6,7 +6,7 @@
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 16:24:51 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/01/24 16:25:29 by mobadiah         ###   ########.fr       */
+/*   Updated: 2024/01/29 16:36:48 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ Brain::Brain() {
 }
 
 Brain::~Brain() {
+	
     std::cout << "Brain destructor called" << std::endl;
 }

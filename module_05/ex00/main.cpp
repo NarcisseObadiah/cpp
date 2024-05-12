@@ -6,7 +6,7 @@
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 06:26:11 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/04/09 06:53:01 by mobadiah         ###   ########.fr       */
+/*   Updated: 2024/05/11 01:31:21 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int main() {
     try {
         // Create a bureaucrat with grade 5
-        Bureaucrat b("John", 5);
+        Bureaucrat b("John", 8);
         std::cout << "Initial bureaucrat: " << b << std::endl;
         
         // Increment grade
