@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: narcisse <narcisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 11:48:12 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/05/12 11:49:01 by mobadiah         ###   ########.fr       */
+/*   Updated: 2024/05/13 22:27:11 by narcisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "includes/Intern.hpp"
-#include "includes/ShrubberyCreationForm.hpp"
-#include "includes/RobotomyRequestForm.hpp"
-#include "includes/PresidentialPardonForm.hpp"
 
 Intern::Intern() {
     formCreators["shrubbery creation"] = [](const std::string& target) { return new ShrubberyCreationForm(target); };
