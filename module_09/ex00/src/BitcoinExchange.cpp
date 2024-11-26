@@ -6,7 +6,7 @@
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 19:41:57 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/05/20 21:02:04 by mobadiah         ###   ########.fr       */
+/*   Updated: 2024/05/21 01:00:14 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -297,3 +297,4 @@ std::string* BitcoinExchange::splitString(const std::string& s, const std::strin
     result[1] = s.substr(delimiterPos + delimiter.length());
     return result;
 }
+ 

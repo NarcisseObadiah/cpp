@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   A.hpp                                              :+:      :+:    :+:   */
+/*   RPN.HPP                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 06:05:20 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/05/15 06:08:40 by mobadiah         ###   ########.fr       */
+/*   Created: 2024/05/25 08:06:17 by mobadiah          #+#    #+#             */
+/*   Updated: 2024/05/25 08:19:45 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef A_HPP
-#define A_HPP
+#ifndef RPN_HPP
+#define RPN_HPP
 
-#include "Base.hpp"
+#include <stack>
+#include <string>
+#include <sstream>
+#include <iostream>
+#include <stdexcept>
+#include <cctype>
 
-class A : public Base {};
+class RPN {
+public:
+    static int evaluate(const std::string& expression);
+
+private:
+    static int performOperation(char operation, int operand1, int operand2);
+};
 
 #endif
 

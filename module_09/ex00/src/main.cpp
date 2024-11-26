@@ -6,7 +6,7 @@
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 19:42:32 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/05/20 23:00:14 by mobadiah         ###   ########.fr       */
+/*   Updated: 2024/05/28 23:26:07 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include <fstream>
 #include <iostream>
 
-void processInputFile(const std::string& filename, BitcoinExchange& btcExchange) {
+void processInputFile(const std::string& filename, BitcoinExchange& btcExchange)
+{
     std::ifstream infile(filename);
     if (!infile.is_open()) {
         std::cerr << "Error: could not open file." << std::endl;
@@ -43,7 +44,8 @@ void processInputFile(const std::string& filename, BitcoinExchange& btcExchange)
     }
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[])
+{
     if (argc != 2) {
         std::cerr << "Usage: " << argv[0] << " <input_file>" << std::endl;
         return 1;

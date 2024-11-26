@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: narcisse <narcisse@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 22:04:22 by narcisse          #+#    #+#             */
-/*   Updated: 2024/05/13 23:17:24 by narcisse         ###   ########.fr       */
+/*   Updated: 2024/05/22 22:38:09 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ int main() {
     if (robotomyForm) {
         try {
             robotomyForm->beSigned(bureaucrat);
-            robotomyForm->execute(bureaucrat);
+            robotomyForm->execute(bureaucrat);    
+
         } catch (const std::exception& e) {
             std::cerr << e.what() << std::endl;
         }
@@ -59,3 +60,4 @@ int main() {
 
     return 0;
 }
+..

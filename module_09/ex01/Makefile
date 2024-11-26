@@ -6,14 +6,14 @@
 #    By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/13 23:30:41 by narcisse          #+#    #+#              #
-#    Updated: 2024/05/15 06:23:54 by mobadiah         ###   ########.fr        #
+#    Updated: 2024/05/25 08:57:06 by mobadiah         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = base
+NAME = RPN
 FLAGS = -Wall -Werror -Wextra -std=c++98
 CC = c++
-SRCS =  main.cpp Functions.cpp
+SRCS =  main.cpp RPN.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 $(NAME): $(OBJS)

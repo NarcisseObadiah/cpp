@@ -6,7 +6,7 @@
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 10:35:30 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/05/15 10:43:05 by mobadiah         ###   ########.fr       */
+/*   Updated: 2024/05/27 23:11:05 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 #include <iterator>
 
 template<typename T>
-class MutantStack : public std::stack<T> {
+class MutantStack : public std::stack<T> 
+{
 public:
     typedef typename std::stack<T>::container_type::iterator iterator;
     typedef typename std::stack<T>::container_type::reverse_iterator reverse_iterator;
@@ -32,4 +33,4 @@ public:
     reverse_iterator rend() { return std::stack<T>::c.rend(); }
 };
 
-#endif // MUTANTSTACK_HPP
+#endif

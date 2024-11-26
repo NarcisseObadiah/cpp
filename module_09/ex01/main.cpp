@@ -5,19 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 06:13:34 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/05/15 06:36:27 by mobadiah         ###   ########.fr       */
+/*   Created: 2024/05/25 07:46:13 by mobadiah          #+#    #+#             */
+/*   Updated: 2024/05/25 08:56:18 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/Functions.hpp"
+#include "RPN.hpp"
 
-int main() {
-    Base* basePtr = generate();
-    identify(basePtr);
-    identify(*basePtr);
-    
-    delete basePtr; // Clean up the allocated memory
 
-    return 0;
+int main(int argc, char* argv[])
+{
+	if (argc != 2)
+	{
+		std::cerr << "Usage: "<< argv[0] << "\"<expression>\""<< std::endl;
+		return 1;
+	}
+	try
+	{
+		std::string expression = argv[1];
+		int result = RPN::evaluate(expression);
+		std::cout <<result << std::endl;
+	} catch (const std::exception& e){
+		std::cerr << e.what() << std::endl;
+		return 1;
+	}
+	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 06:50:37 by mobadiah          #+#    #+#             */
-/*   Updated: 2024/05/15 06:53:16 by mobadiah         ###   ########.fr       */
+/*   Updated: 2024/05/26 16:34:04 by mobadiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include <string>
 #include "whatever.hpp"
 
-int main(void) {
+int main(void) 
+{
     int a = 2;
     int b = 3;
     ::swap(a, b);

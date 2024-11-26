@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: narcisse <narcisse@student.42.fr>          +#+  +:+       +#+         #
+#    By: mobadiah <mobadiah@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/13 23:30:41 by narcisse          #+#    #+#              #
-#    Updated: 2024/05/13 23:41:11 by narcisse         ###   ########.fr        #
+#    Updated: 2024/05/27 20:25:29 by mobadiah         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = converter
+NAME = PmergeMe
 FLAGS = -Wall -Werror -Wextra -std=c++98
 CC = c++
-SRCS =  ScalarConverter.cpp main.cpp
+SRCS =  main.cpp PmergeMe.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 $(NAME): $(OBJS)
